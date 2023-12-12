@@ -28,6 +28,8 @@ calcular.addEventListener("click", () => {
         FLU.innerHTML = `Para mayores de 30 kg se calcula por SC\n Volumen Diario: ${vol1} cc/hr, ${volt2} cc/hr`;
         MAN.innerHTML = ""; 
         ERROR.style.display = 'none';
+        ocultarError();
+        mostrarResultados();
     } else if (dato <= 30) {
         let resultado = Math.round(hollidaySegar(dato));
         let mantenimiento = Math.round(calcularMantenimiento(resultado));
