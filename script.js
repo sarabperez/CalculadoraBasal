@@ -1,77 +1,4 @@
 
-/*let calcular = document.getElementById("calcular");
-const FLU = document.getElementById("flu");
-const MAN = document.getElementById("man");
-const ERROR = document.getElementById("error");
-
-calcular.addEventListener("click", () => {
-    let dato = document.getElementById("peso").valueAsNumber;
-    console.log(dato);
-
-    if (isNaN(dato) || dato <= 0) {
-        console.log("Algo");
-        mostrarError();
-        ocultarResultados();
-        return;
-    }
-
-    if (dato > 30) {
-        let vol1 = superficieCorporal(dato) * 1500;
-        let volt2 = superficieCorporal(dato) * 2000;
-        console.log(vol1, volt2);
-        ERROR.style.display = 'none';
-    } else if (dato <= 30) {
-        let resultado = hollidaySegar(dato);
-        let mantenimiento = calcularMantenimiento(resultado);
-        let medMantenimiento = mantenimiento * 1.5;
-        let mantOfi = mantenimiento + medMantenimiento;
-        console.log(resultado, mantOfi);
-
-        FLU.innerHTML = resultado + ' cc/hr';
-        MAN.innerHTML = 'm+m/2 ' + mantOfi + ' cc/hr';
-
-        ocultarError();
-        mostrarResultados();
-    }
-});
-
-function mostrarError() {
-    ERROR.style.display = 'block';
-}
-
-function ocultarError() {
-    ERROR.style.display = 'none';
-}
-
-function ocultarResultados() {
-    FLU.style.display = 'none';
-    MAN.style.display = 'none';
-}
-
-function mostrarResultados() {
-    FLU.style.display = 'block';
-    MAN.style.display = 'block';
-}
-
-function superficieCorporal(peso) {
-    return (peso * 4 + 7) / (peso + 90);
-}
-
-function hollidaySegar(peso) {
-    if (peso <= 10) {
-        return peso * 100;
-    } else if (peso <= 20) {
-        return (peso - 10) * 50 + 1000;
-    } else {
-        return (peso - 20) * 20 + 1000 + 500;
-    }
-}
-
-function calcularMantenimiento(resultado) {
-    let flujoHorario = resultado / 24;
-    return flujoHorario;
-}
-*/
 let calcular = document.getElementById("calcular");
 const FLU = document.getElementById("flu");
 const MAN = document.getElementById("man");
@@ -95,10 +22,10 @@ calcular.addEventListener("click", () => {
     SUPERFICIE.innerHTML = `Superficie Corporal: ${resultadoSuperficie}`;
 
     if (dato > 30) {
-        let vol1 = Math.round(superficieCorporal((dato) * 1500)/24);
-        let volt2 = Math.round(superficieCorporal((dato) * 2000)/24);
+        let vol1 = Math.round(superficieCorporal(dato) * 1500)/24;
+        let volt2 = Math.round(superficieCorporal(dato) * 2000)/24;
 
-        FLU.innerHTML = `Para mayores de 30 kg se calcula por SC\n Volumen Diario: ${vol1} cc/hr, ${volt2} cc/hr`;
+        FLU.innerHTML = `Para mayores de 30 kg se calcula por SC\n Volumen Diario: ${vol1.toFixed(2)} cc/hr, ${volt2.toFixed(2)} cc/hr`;
         MAN.innerHTML = ""; 
         ERROR.style.display = 'none';
     } else if (dato <= 30) {
