@@ -2,7 +2,7 @@
 
 body{
     font-family: 'Montserrat', sans-serif, arial;
-    background: #f6f5f7; 
+    background: radial-gradient(circle, #608986, #9AD7A7, #B3D5C9 );
     font-family: 'Montserrat', sans-serif;
     color: #3E363F;
 }
@@ -36,7 +36,7 @@ padding: 40px;
     float: left;
 }
 #detalle{
-    background: #FF416C;
+    background: linear-gradient(to margin-bottom, #608986, #9AD7A7, #B3D5C9);
     /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
     width: 50%;
     height: 100%;
@@ -55,8 +55,8 @@ button {
 	font-weight: bold;
 	padding: 12px 45px;
 	border-radius: 30px;
-	background-color: #FF416C;
-	border: 1px solid #FF416C;
+	background-color: #53778B;
+	border: 1px solid #214865;
 	color: #FFFFFF;
 	text-transform: uppercase;
 	letter-spacing: 1px;
