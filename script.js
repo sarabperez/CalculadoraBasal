@@ -22,10 +22,10 @@ calcular.addEventListener("click", () => {
     SUPERFICIE.innerHTML = `Superficie Corporal: ${resultadoSuperficie}`;
 
     if (dato > 30) {
-        let vol1 = Math.round(superficieCorporal(dato) * 1500)/24;
-        let volt2 = Math.round(superficieCorporal(dato) * 2000)/24;
+        let vol1 = Math.round(superficieCorporal(dato) * 1500);
+        let volt2 = Math.round(superficieCorporal(dato) * 2000);
 
-        FLU.innerHTML = `Para mayores de 30 kg se calcula por SC\n Volumen Diario: ${vol1.toFixed(2)} cc/hr, ${volt2.toFixed(2)} cc/hr`;
+        FLU.innerHTML = `Para mayores de 30 kg se calcula por SC\n Volumen Diario: ${vol1} cc/hr, ${volt2} cc/hr`;
         MAN.innerHTML = ""; 
         ERROR.style.display = 'none';
     } else if (dato <= 30) {
